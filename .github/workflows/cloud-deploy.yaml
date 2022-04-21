@@ -1,6 +1,6 @@
-name: test action
-on: 
-workflow_dispatch
+name: TEST Action
+on:
+  workflow_dispatch:
 
 name: build
 jobs:
