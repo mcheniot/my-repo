@@ -1,4 +1,6 @@
-on: [push, pull_request]
+on: 
+wokrflow_dispatch
+
 name: build
 jobs:
   build:
