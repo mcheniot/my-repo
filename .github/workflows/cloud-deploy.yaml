@@ -1,5 +1,5 @@
 on: 
-wokrflow_dispatch
+workflow_dispatch
 
 name: build
 jobs:
