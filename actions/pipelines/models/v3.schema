@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "properties": {
+        "application": {
+            "type": "string"
+        },
+        "namespace": {
+            "type": "string"
+        },
+        "cmdbId": {
+            "type": ["string","number"]
+        },
+        "costCentre": {
+            "type": ["string", "number"]
+        },
+        "organization": {
+            "type": "string"
+        },
+        "mailingList": {
+            "type": "string"
+        },
+        "port": {
+            "type": ["string","number"]
+        }
+    },
+    "required": [
+        "application",
+        "namespace",
+        "port",
+        "cmdbId",
+        "costCentre",
+        "organization",
+        "mailingList"
+    ],
+    "additionalProperties": true
+}

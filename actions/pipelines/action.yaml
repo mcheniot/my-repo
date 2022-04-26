@@ -1,0 +1,44 @@
+name: "Update pipelines"
+description: "Get the spinnaker pipelines from your values file"
+inputs:
+  pipeline-version:
+    description: "The pipeline version"
+    required: true
+    default: ""
+  github-token:
+    description: "PAT from github org"
+    required: true
+  username:
+    description: "The owner of the PAT username"
+    required: true
+    default: ""
+  email:
+    description: "The owner of the PAT email"
+    required: true
+  output-values-path:
+    description: "Folder where you want to store the generated values files"
+    required: true
+    default: "helm"
+  source-repo:
+    description: "Source code repository, only the name"
+    required: true
+    default: "gcp-pipeline-templates"
+runs:
+  using: "composite"
+  steps:
+    - run: echo Starting pipeline template
+      shell: bash
+    - run: ${{ github.action_path }}/setup.sh
+      shell: bash
+      env:
+        PIPELINE_TAG: ${{ inputs.pipeline-version }}
+        GITHUB_PAT: ${{ inputs.github-token }}
+        GITHUB_REPO: ${{ github.repository }}
+        GITHUB_TOKEN: ${{ inputs.github-token }}
+        OUTPUT_VALUES_PATH: ${{inputs.output-values-path}}
+        SOURCE_REPO: ${{inputs.source-repo}}
+        ACTION_DIR: ${{ github.action_path }}
+        USERNAME: ${{inputs.username}}
+        EMAIL: ${{inputs.email}}
+    - run: echo Pipeline template finished
+      shell: bash

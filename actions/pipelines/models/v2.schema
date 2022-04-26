@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "chart": {
+            "type": "string",
+            "pattern": "^cio-gke-deployment-chart.[0-9]+.[0-9]+.[0-9]+$"
+        },
+        "application": {
+            "type": "string"
+        },
+        "namespace": {
+            "type": "string"
+        },
+        "clusterNp": {
+            "type": "string"
+        },
+        "clusterPr": {
+            "type": "string"
+        },
+        "cmdbId": {
+            "type": ["string","number"]
+        },
+        "costCentre": {
+            "type": ["string", "number"]
+        },
+        "organization": {
+            "type": "string"
+        },
+        "mailingList": {
+            "type": "string"
+        },
+        "spinnakerServiceAccount": {
+            "type": "string"
+        },
+        "port": {
+            "type": ["string","number"]
+        },
+        "hostnameNp": {
+            "type": "string"
+        },
+        "hostnamePr": {
+            "type": "string"
+        },
+        "crqRequester": {
+            "type": "string"
+        },
+        "crqTemplate": {
+            "type": "string"
+        },
+        "crqSummary": {
+            "type": "string"
+        },
+        "crqImage": {
+            "type": "string"
+        },
+        "crqWorkInfo": {
+            "type": "object"
+        },
+        "sonarSourcesDir": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "name",
+        "chart",
+        "application",
+        "namespace",
+        "clusterNp",
+        "clusterPr",
+        "cmdbId",
+        "costCentre",
+        "organization",
+        "mailingList",
+        "spinnakerServiceAccount",
+        "port",
+        "hostnameNp",
+        "hostnamePr",
+        "crqRequester",
+        "crqTemplate",
+        "crqSummary",
+        "sonarSourcesDir"
+    ],
+    "additionalProperties": true
+}
