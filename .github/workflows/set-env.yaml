@@ -1,0 +1,3 @@
+name: setup env variables
+on:
+  workflow_dispatch:
