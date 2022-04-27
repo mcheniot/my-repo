@@ -1,0 +1,31 @@
+1.
+mvn install
+
+2.
+docker build -f Dockerfile -t docker-secret .
+
+dcoker images
+
+3.
+docker tag docker-secret cyqgz/docker-secret:latest
+
+4.
+docker push cyqgz/docker-secret:latest
+
+5.
+oc new-app cyqgz/docker-secret --name=docker-secret-v0
+
+========================================
+oc expose dc docker-secret --port=8080
+
+oc new-app cyqgz/docker-secret --name=docker-secret-v0
+
+
+oc rollout status dc/docker-secret
+
+oc volume pod/<pod name>secret-poc-v0-7-9lgmt --list
+
+oc describe secret/<secret name>my-own-secret
+
+
+kubectl apply -f myapp.yaml
