@@ -10,7 +10,8 @@ jobs:
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
-        uses: actions/checkout@:latest
+        uses: actions/checkout@v5
+      - name: Setup permission
         run:  chmod +x entrypoint.sh
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
