@@ -17,6 +17,6 @@ The time we greeted you.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
+uses: actions/checkout@v1
 with:
-  who-to-greet: 'Mona the Octocat'
+  who-to-greet: 'Michael Chen'
