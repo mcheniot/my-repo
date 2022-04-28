@@ -1,3 +1,4 @@
+name: Docker action test
 on: 
   workflow_dispatch:
 
@@ -8,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: actions/mcheniot/my-repo@v2
+        uses: actions/my-repo@v3
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
