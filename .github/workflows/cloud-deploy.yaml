@@ -26,7 +26,7 @@ jobs:
     #environment: ST
     steps:
       - name: inputs are
-        run: echo "${{ github.event.inputs.env }},  ${{ github.event.inputs.tagVersion }"
+        run: echo "${{ github.event.inputs.Env }},  ${{ github.event.inputs.tagVersion }}"
       - name: Get current date
         id: date
         run: echo "::set-output name=date::$(date +'%Y%m%d')"
