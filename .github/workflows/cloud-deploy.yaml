@@ -6,8 +6,13 @@ on:
         description: 'Image Tag'     
         required: true
         default: 'latest'
+        #description: 'Image Build Tag/Version'
+      Env:
+        description: 'Deployed Env'     
+        required: true
+        default: 'dv'
       tags:
-        description: 'Image Build Tag/Version'  
+        description: 'Image Build Tag/Version'
 
 jobs:
   build:
