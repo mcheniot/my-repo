@@ -6,6 +6,7 @@ jobs:
   build:
     name: Example
     runs-on: ubuntu-latest
+    environment: ST
     steps:
       - name: Get current date
         id: date
