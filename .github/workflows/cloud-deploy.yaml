@@ -1,6 +1,13 @@
 name: TEST Action
 on:
   workflow_dispatch:
+    inputs:
+      tagVersion:
+        description: 'Image Tag'     
+        required: true
+        default: 'latest'
+      tags:
+        description: 'Image Build Tag/Version'  
 
 jobs:
   build:
