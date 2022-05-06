@@ -11,9 +11,7 @@ on:
         description: 'Deployed Env'     
         required: true
         default: 'dv'
-      tags:
-        description: 'Image Build Tag/Version'
-
+      
 jobs:
   build:
     name: Example
