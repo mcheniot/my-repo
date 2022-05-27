@@ -39,3 +39,18 @@ jobs:
         uses: actions/hello-world-docker-action@master
         with:
           who-to-greet: Mona-the-Octocat-${{ steps.date.outputs.date }}
+      - name: test yaml file 
+        run: |-
+          echo 'apiVersion: deploy.cloud.google.com/v1 
+                kind: DeliveryPipeline 
+                metadata:  
+                 name: ${{ github.event.inputs.Env }}  
+                 annotations: {} 
+                 labels: {} 
+                description: CICD demo deploy pipeline 
+                serialPipeline: 
+                 stages: 
+                 - targetId: ${{ github.event.inputs.tagVersion }} 
+                   profiles: [${{ github.event.inputs.tagVersion }}] ' >> temp.yaml 
+          cat temp.yaml
+      
