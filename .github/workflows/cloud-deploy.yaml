@@ -54,8 +54,8 @@ jobs:
           description: CICD demo deploy pipeline
           serialPipeline:
            stages:
-           - targetId: ${{github.event.inputs.targetName}}
-           profiles: [${{github.event.inputs.targetName}}]
+           - targetId: ${{github.event.inputs.Env}}
+           profiles: [${{github.event.inputs.Env}}]
           
           cat temp.yaml
       
