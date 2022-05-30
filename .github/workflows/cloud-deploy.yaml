@@ -22,7 +22,7 @@ on:
 env:
   
   # Your Cloud Deploy pipeline name, as defined in clouddeploy.yaml metadata.name for kind:DeliveryPipeline
-  DELIVERY_PIPELINE_NAME: backfill-to-${{ github.event.inputs.targetName }}
+  DELIVERY_PIPELINE_NAME: backfill-to-${{ github.event.inputs.Env }}
       
 jobs:
   build:
