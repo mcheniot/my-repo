@@ -56,6 +56,6 @@ jobs:
            stages:
            - targetId: ${{github.event.inputs.Env}}
            profiles: [${{github.event.inputs.Env}}]
-          
+          '
           cat temp.yaml
       
