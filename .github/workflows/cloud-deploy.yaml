@@ -20,8 +20,6 @@ on:
         - pr
 
 env:
-  
-  # Your Cloud Deploy pipeline name, as defined in clouddeploy.yaml metadata.name for kind:DeliveryPipeline
   DELIVERY_PIPELINE_NAME: backfill-to-${{ github.event.inputs.Env }}
       
 jobs:
@@ -47,12 +45,6 @@ jobs:
       - name: test yaml file 
         run: |-
           echo '
-                apiVersion: deploy.cloud.google.com/v1 
-                kind: DeliveryPipeline 
-                metadata:  
-                 name: - name: Create or update Cloud Deploy Pipeline
-        run: |-
-          echo '
           apiVersion: deploy.cloud.google.com/v1
           kind: DeliveryPipeline
           metadata:
@@ -65,13 +57,5 @@ jobs:
            - targetId: ${{github.event.inputs.targetName}}
            profiles: [${{github.event.inputs.targetName}}]
           
-          '  
-                 annotations: {} 
-                 labels: {} 
-                description: CICD demo deploy pipeline 
-                serialPipeline: 
-                 stages: 
-                 - targetId: ${{ github.event.inputs.tagVersion }} 
-                   profiles: [${{ github.event.inputs.tagVersion }}] ' >> temp.yaml 
           cat temp.yaml
       
