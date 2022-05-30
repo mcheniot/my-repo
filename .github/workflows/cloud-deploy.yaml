@@ -44,7 +44,7 @@ jobs:
           who-to-greet: Mona-the-Octocat-${{ steps.date.outputs.date }}
       - name: test yaml file 
         run: |-
-          echo '
+          echo ' 
           apiVersion: deploy.cloud.google.com/v1
           kind: DeliveryPipeline
           metadata:
